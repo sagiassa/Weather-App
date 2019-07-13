@@ -7,7 +7,7 @@ const path = require( 'path' )
 
 const api = require('./routes/city')
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT 
 const mongoose = require('mongoose')
 
 const router = require('./routes/city')
@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 app.use('/', api)
 
 
-mongoose.connect("mongodb://localhost/Weather-App", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Weather-App", { useNewUrlParser: true })
 app.listen(PORT, function(){
     console.log("server rnning on " + PORT)
 })
