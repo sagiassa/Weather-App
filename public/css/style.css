@@ -1,0 +1,132 @@
+body {
+    
+    color : white;
+    font-size : 35px;
+    background-color : rgb(92, 177, 180);
+    /* background: url(https://i.pinimg.com/originals/90/79/13/9079139e7b2838940d63611b39bf7019.jpg)
+    no-repeat center center fixed; 
+    background-size: cover; */
+    
+    
+    
+}
+h2{
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+
+}
+p{
+    border: solid hidden 2px;
+    background:  rgb(41, 41, 150);;
+    border-radius: 0.5em;
+    width: 300px;   
+    padding: 10px;
+    text-align: center;
+    cursor : pointer;
+    
+}
+
+.top {
+    display:grid;
+    
+    margin-bottom: 30px;
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    grid-template-areas: "N N s"
+    
+}
+#search{
+    border-radius: 0.4em;
+    height: 50px;
+    font-size: 35px;
+    font-family: 'Arvo', serif;  
+}
+#name {
+    display: inline-block;
+    height:45px;
+    font-family: 'Arvo', serif;
+    grid-area: N;
+    grid-column: col 0/ span  3; 
+    font-size: 40px;
+    border-radius: 0.4em;
+}
+
+.city {
+    font-size: 35px;
+    background: url(https://media.giphy.com/media/2NIKaI5jkR4ac/giphy.gif)
+    no-repeat center center fixed; 
+    background-size: cover;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.city{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 3px;
+    border : solid hidden 2px; 
+    border-radius: 0.5em;
+    padding: 15px;
+    margin-top: 10px;
+    align-items: center;
+    grid-template-areas: 
+    "n n s d"
+    "t . i i"
+    "t . i i"
+    "u u c c"
+}
+.name { 
+    grid-area:  n;
+    font-size: 40px;
+    font-style: italic ;
+    border: 1px solid hidden;
+    justify-self: flex-start;
+    /* padding-left : 40px;
+    padding-right : 40px; */
+    text-decoration: underline;
+    padding: 15px;
+    
+    
+    
+    
+}
+.temp {
+    grid-area: t;
+}
+.condi {
+    grid-area: c;
+    justify-self: center;
+
+}
+.update {
+    grid-area: u;
+}
+img {
+    grid-area: i;
+    justify-self: center;
+    height: 150px;
+}
+.save{
+    display: inline-block;
+    border: none;
+    background : none;
+    font-size: 50px;
+    color: white;
+    grid-area : s;
+    text-align: right;  
+    grid-column: col 3/ span  2; 
+
+}
+.delete {
+    text-align: right;
+    border: none;
+    background : none;
+    font-size: 50px;
+    color: red;
+    grid-area: d;
+    
+    
+    
+}

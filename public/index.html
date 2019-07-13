@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Notable|Squada+One|Ubuntu&display=swap" rel="stylesheet">
+    <title>weather</title>
+</head>
+
+<body>
+    <h2>Check The Weather</h2>
+    
+    <p > Click here to start !</p>
+    <div class = "top">
+    <input id = "name" placeholder="  Enter the city name here">
+    <button id ="search">Search !</i></button> 
+    </div>
+    <div id="results"></div>
+    <script id="weather-template" type="text-/x-handlebars-template">
+        {{#each data}}
+        
+            <div class = "city">
+                
+                <div class= "name">{{name}}</div>
+                <div class = "temp">Degeers : {{temperature}}°</div>
+                <div class = "condi">{{condition}}</div>
+                <div class = "update" >Updated At: {{updatedAt}}</div>
+                <img src= {{conditionPic}}>  
+                <button class = "save"><i class="fa fa-save"></i></button>
+                <button class = "delete"> <i class="fa fa-trash"></i></button>
+            </div>
+            {{/each}}
+        </script>
+    <script src="TempManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
