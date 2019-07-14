@@ -5,6 +5,7 @@ class TempManager {
     }
    async getDataFromDB() {
         this.cityData = await $.get('/cities')
+        
     }
 
    async getCityData(cityName) {
@@ -26,7 +27,7 @@ class TempManager {
             url: `/city/${cityName}` ,
             type: 'DELETE',
             success: function(result) {
-                
+                console.log(result)
                 console.log("Delete is Success")
             }
         })

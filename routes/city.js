@@ -34,13 +34,9 @@ router.post('/city', function(req, res){
 router.delete('/city/:cityName', function( req, res )  {
     let city = req.params.cityName
     // console.log(city)
-    //city = city[0].toUpperCase()  + city.slice(1)     
-    CityModel.find({}, function (err, response) {
-        let i = response.findIndex(x => x.name === city)
-        if(i !== -1){
-        response[i].remove()
-        console.log("deleted from DB") 
-        }
+    //city = city[0].toUpperCase()  + city.slice(1)        
+    CityModel.findOneAndRemove({name: city}, function(response){
+        console.log('deleted')
     })
     res.end()  
    })

@@ -25,10 +25,10 @@ $('body').on('click','.save', async function(){
 })
 
 $('body').on('click','.delete', async function(){
-    let city = $(this).closest('.city').find('.name').text()
+    let city = $(this).siblings('.name').text()
     tempManager.removeCity(city)
     await tempManager.getDataFromDB()
-    r.renderData(tempManager.cityData)
+    $(this).parent().remove()
 })
 
 $('p').on('click', function(){

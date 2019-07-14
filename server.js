@@ -7,7 +7,7 @@ const path = require( 'path' )
 
 const api = require('./routes/city')
 
-const PORT = process.env.PORT || 3000
+const PORT = 4567
 const mongoose = require('mongoose')
 
 const router = require('./routes/city')
@@ -20,5 +20,7 @@ app.use(bodyParser.json())
 app.use('/', api)
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Weather-App", { useNewUrlParser: true })
-app.listen(process.env.PORT || PORT)
+mongoose.connect( "mongodb://localhost/Weather-App", { useNewUrlParser: true })
+app.listen( PORT, function(err, res){
+    console.group("the server runs on port " + PORT)
+})
